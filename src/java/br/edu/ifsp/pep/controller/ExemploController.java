@@ -21,17 +21,14 @@ public class ExemploController implements Serializable {
         System.out.println("construtor.");
         this.pessoa = new Pessoa();
     }
-
-    public void teste() {
-        System.out.println("Executou o método teste.");
-        System.out.println("Nome: " + this.pessoa.getNome());
-    }
     
     public void adicionar() {
         System.out.println("adicionou pessoa na lista.");
         this.pessoas.add(pessoa);
         this.pessoa = new Pessoa();
         addMessage(FacesMessage.SEVERITY_INFO, "Informação", "Cadastro realizado.");
+        
+        System.out.println("Nome: " + this.pessoa.getNome());
         
     }
     
